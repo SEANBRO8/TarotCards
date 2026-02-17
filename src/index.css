@@ -1,0 +1,78 @@
+/* ========== Base & Reset ========== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #c9a84c;
+  --primary-glow: #ffd700;
+  --bg-dark: #0a0a1a;
+  --bg-card: #12122a;
+  --bg-card-hover: #1a1a3a;
+  --text-primary: #e8e0d0;
+  --text-secondary: #a09880;
+  --accent-purple: #7b5ea7;
+  --accent-blue: #4a6fa5;
+  --gradient-gold: linear-gradient(135deg, #c9a84c, #ffd700, #c9a84c);
+  --gradient-mystic: linear-gradient(135deg, #1a1a3a, #2a1a4a, #1a2a4a);
+  --shadow-gold: 0 0 30px rgba(201, 168, 76, 0.3);
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --font-cn: 'Noto Serif SC', 'Songti SC', serif;
+  --font-en: 'Cinzel', serif;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-cn);
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ========== Stars ========== */
+.stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--duration) ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: var(--max-opacity); }
+}
+
+/* ========== App Container ========== */
+.app-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* ========== Scrollbar ========== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: rgba(201, 168, 76, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(201, 168, 76, 0.5); }
+
+::selection {
+  background: rgba(201, 168, 76, 0.3);
+  color: var(--text-primary);
+}

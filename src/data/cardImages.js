@@ -1,0 +1,95 @@
+const W = 'https://upload.wikimedia.org/wikipedia/commons';
+
+const URLS = {
+  // ===== Major Arcana (0-21) =====
+  0:  `${W}/9/90/RWS_Tarot_00_Fool.jpg`,
+  1:  `${W}/d/de/RWS_Tarot_01_Magician.jpg`,
+  2:  `${W}/8/88/RWS_Tarot_02_High_Priestess.jpg`,
+  3:  `${W}/d/d2/RWS_Tarot_03_Empress.jpg`,
+  4:  `${W}/c/c3/RWS_Tarot_04_Emperor.jpg`,
+  5:  `${W}/8/8d/RWS_Tarot_05_Hierophant.jpg`,
+  6:  `${W}/3/3a/RWS_Tarot_06_Lovers.jpg`,
+  7:  `${W}/9/9b/RWS_Tarot_07_Chariot.jpg`,
+  8:  `${W}/f/f5/RWS_Tarot_08_Strength.jpg`,
+  9:  `${W}/4/4d/RWS_Tarot_09_Hermit.jpg`,
+  10: `${W}/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg`,
+  11: `${W}/e/e0/RWS_Tarot_11_Justice.jpg`,
+  12: `${W}/2/2b/RWS_Tarot_12_Hanged_Man.jpg`,
+  13: `${W}/d/d7/RWS_Tarot_13_Death.jpg`,
+  14: `${W}/f/f8/RWS_Tarot_14_Temperance.jpg`,
+  15: `${W}/5/55/RWS_Tarot_15_Devil.jpg`,
+  16: `${W}/5/53/RWS_Tarot_16_Tower.jpg`,
+  17: `${W}/d/db/RWS_Tarot_17_Star.jpg`,
+  18: `${W}/7/7f/RWS_Tarot_18_Moon.jpg`,
+  19: `${W}/1/17/RWS_Tarot_19_Sun.jpg`,
+  20: `${W}/d/dd/RWS_Tarot_20_Judgement.jpg`,
+  21: `${W}/f/ff/RWS_Tarot_21_World.jpg`,
+
+  // ===== Wands (22-35): Ace=01 ... King=14 =====
+  22: `${W}/1/11/Wands01.jpg`,
+  23: `${W}/0/0f/Wands02.jpg`,
+  24: `${W}/f/ff/Wands03.jpg`,
+  25: `${W}/a/a4/Wands04.jpg`,
+  26: `${W}/9/9d/Wands05.jpg`,
+  27: `${W}/3/3b/Wands06.jpg`,
+  28: `${W}/e/e4/Wands07.jpg`,
+  29: `${W}/6/6b/Wands08.jpg`,
+  30: `${W}/4/4d/Tarot_Nine_of_Wands.jpg`,  // Wands09 missing, alt name
+  31: `${W}/0/0b/Wands10.jpg`,
+  32: `${W}/6/6a/Wands11.jpg`,
+  33: `${W}/1/16/Wands12.jpg`,
+  34: `${W}/0/0d/Wands13.jpg`,
+  35: `${W}/c/ce/Wands14.jpg`,
+
+  // ===== Cups (36-49) =====
+  36: `${W}/3/36/Cups01.jpg`,
+  37: `${W}/f/f8/Cups02.jpg`,
+  38: `${W}/7/7a/Cups03.jpg`,
+  39: `${W}/3/35/Cups04.jpg`,
+  40: `${W}/d/d7/Cups05.jpg`,
+  41: `${W}/1/17/Cups06.jpg`,
+  42: `${W}/a/ae/Cups07.jpg`,
+  43: `${W}/6/60/Cups08.jpg`,
+  44: `${W}/2/24/Cups09.jpg`,
+  45: `${W}/8/84/Cups10.jpg`,
+  46: `${W}/a/ad/Cups11.jpg`,
+  47: `${W}/f/fa/Cups12.jpg`,
+  48: `${W}/6/62/Cups13.jpg`,
+  49: `${W}/0/04/Cups14.jpg`,
+
+  // ===== Swords (50-63) =====
+  50: `${W}/1/1a/Swords01.jpg`,
+  51: `${W}/9/9e/Swords02.jpg`,
+  52: `${W}/0/02/Swords03.jpg`,
+  53: `${W}/b/bf/Swords04.jpg`,
+  54: `${W}/2/23/Swords05.jpg`,
+  55: `${W}/2/29/Swords06.jpg`,
+  56: `${W}/3/34/Swords07.jpg`,
+  57: `${W}/a/a7/Swords08.jpg`,
+  58: `${W}/2/2f/Swords09.jpg`,
+  59: `${W}/d/d4/Swords10.jpg`,
+  60: `${W}/4/4c/Swords11.jpg`,
+  61: `${W}/b/b0/Swords12.jpg`,
+  62: `${W}/d/d4/Swords13.jpg`,
+  63: `${W}/3/33/Swords14.jpg`,
+
+  // ===== Pentacles (64-77) =====
+  64: `${W}/f/fd/Pents01.jpg`,
+  65: `${W}/9/9f/Pents02.jpg`,
+  66: `${W}/4/42/Pents03.jpg`,
+  67: `${W}/3/35/Pents04.jpg`,
+  68: `${W}/9/96/Pents05.jpg`,
+  69: `${W}/a/a6/Pents06.jpg`,
+  70: `${W}/6/6a/Pents07.jpg`,
+  71: `${W}/4/49/Pents08.jpg`,
+  72: `${W}/f/f0/Pents09.jpg`,
+  73: `${W}/4/42/Pents10.jpg`,
+  74: `${W}/e/ec/Pents11.jpg`,
+  75: `${W}/d/d5/Pents12.jpg`,
+  76: `${W}/8/88/Pents13.jpg`,
+  77: `${W}/1/1c/Pents14.jpg`,
+};
+
+export function getCardImageUrl(cardId) {
+  return URLS[cardId] || null;
+}

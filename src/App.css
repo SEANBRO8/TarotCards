@@ -1,0 +1,1052 @@
+/* ========== Page Wrapper ========== */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-content {
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-page-content {
+  justify-content: flex-start;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+/* ========== Landing Page ========== */
+.landing-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.moon-symbol {
+  font-size: 5rem;
+  color: var(--primary);
+  text-shadow: 0 0 40px rgba(201, 168, 76, 0.5);
+  animation: float 4s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.main-title {
+  margin-bottom: 1rem;
+}
+
+.title-en {
+  display: block;
+  font-family: var(--font-en);
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+}
+
+.title-cn {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.5em;
+  margin-top: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+/* ========== Spread Selection ========== */
+.spread-selection {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.spread-btn {
+  background: var(--gradient-mystic);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  width: 220px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-cn);
+}
+
+.spread-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(201, 168, 76, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.spread-btn:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-gold);
+}
+
+.spread-btn:hover::before { opacity: 1; }
+
+.spread-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.spread-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-glow);
+}
+
+.spread-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ========== Back Button ========== */
+.back-btn {
+  position: fixed;
+  top: 2rem; left: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--text-secondary);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-cn);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.back-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(201, 168, 76, 0.1);
+}
+
+/* ========== Question Page ========== */
+.question-container {
+  text-align: center;
+  max-width: 500px;
+}
+
+.crystal-ball {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.question-container h2 {
+  font-size: 1.8rem;
+  color: var(--primary-glow);
+  margin-bottom: 1rem;
+}
+
+.hint-text {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.question-container textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 12px;
+  padding: 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-cn);
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.question-container textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.1);
+}
+
+.question-container textarea::placeholder {
+  color: rgba(160, 152, 128, 0.5);
+}
+
+/* ========== Draw Button ========== */
+.draw-btn {
+  position: relative;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary-glow);
+  padding: 1rem 3rem;
+  font-family: var(--font-cn);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  letter-spacing: 0.1em;
+}
+
+.draw-btn:hover {
+  background: rgba(201, 168, 76, 0.15);
+  box-shadow: var(--shadow-gold);
+  transform: scale(1.05);
+}
+
+.btn-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.3), transparent 50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.draw-btn:hover .btn-glow { opacity: 1; }
+
+/* ========== Card Drawing ========== */
+.draw-page-content {
+  justify-content: center;
+  gap: 0;
+  user-select: none;
+  padding-top: 4rem;
+}
+
+.draw-title {
+  font-size: 1.8rem;
+  color: var(--primary-glow);
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.draw-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.draw-count {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.draw-hint {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* ========== Picked Cards Area (above carousel) ========== */
+.picked-cards-area {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.picked-slot {
+  width: 80px;
+  height: 120px;
+  border-radius: 12px;
+  border: 2px dashed rgba(201, 168, 76, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.picked-slot-filled {
+  border-style: solid;
+  border-color: var(--primary);
+  background: rgba(201, 168, 76, 0.08);
+  box-shadow: 0 0 25px rgba(201, 168, 76, 0.15);
+  animation: slotFillPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes slotFillPop {
+  0%   { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.picked-slot-symbol {
+  font-size: 1.8rem;
+  color: var(--primary-glow);
+}
+
+.picked-slot-label {
+  font-size: 0.7rem;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+}
+
+.picked-slot-placeholder {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+/* ========== Carousel ========== */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.carousel-stage {
+  width: 600px;
+  height: 240px;
+  position: relative;
+  cursor: grab;
+  overflow: visible;
+  touch-action: pan-y;
+}
+
+.carousel-stage:active { cursor: grabbing; }
+
+.carousel-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-glow {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 40px;
+  background: radial-gradient(ellipse, rgba(201, 168, 76, 0.12), transparent 70%);
+  pointer-events: none;
+  filter: blur(10px);
+}
+
+/* ========== Carousel Card ========== */
+.carousel-card {
+  position: absolute;
+  width: 110px;
+  height: 175px;
+  border-radius: 12px;
+  background: linear-gradient(160deg, #181838, #0e0e28);
+  border: 2px solid rgba(201, 168, 76, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.carousel-card::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  border-radius: 9px;
+  pointer-events: none;
+}
+
+.carousel-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-card-symbol {
+  font-size: 1.8rem;
+  color: var(--primary);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Center card highlight */
+.carousel-card-front {
+  border-color: var(--primary-glow);
+  box-shadow:
+    0 0 30px rgba(255, 215, 0, 0.25),
+    0 0 60px rgba(201, 168, 76, 0.1),
+    0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-card-front .carousel-card-symbol {
+  opacity: 1;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  font-size: 2.2rem;
+}
+
+.carousel-card-front::before {
+  content: '点击选择';
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-family: var(--font-cn);
+  color: var(--primary-glow);
+  white-space: nowrap;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.carousel-card-disabled {
+  pointer-events: none;
+}
+
+/* ========== Carousel Arrows ========== */
+.carousel-arrow {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  color: var(--primary);
+  font-size: 2.2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-en);
+  line-height: 1;
+  padding-bottom: 3px;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: rgba(201, 168, 76, 0.1);
+  box-shadow: 0 0 15px rgba(201, 168, 76, 0.2);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.15;
+  cursor: not-allowed;
+}
+
+/* ========== Result Page ========== */
+.result-title {
+  font-size: 2rem;
+  color: var(--primary-glow);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.result-overall-badge {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.overall-positive {
+  background: rgba(76, 175, 80, 0.1);
+  color: #81c784;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.overall-neutral {
+  background: rgba(201, 168, 76, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+.overall-challenging {
+  background: rgba(156, 120, 200, 0.1);
+  color: #b39ddb;
+  border: 1px solid rgba(156, 120, 200, 0.3);
+}
+
+.result-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+/* ========== Result Question ========== */
+.result-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 12px;
+  max-width: 600px;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.result-question-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.result-question-text {
+  font-size: 1.1rem;
+  color: var(--primary-glow);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ========== Tarot Card (Result) ========== */
+.tarot-card {
+  width: 200px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.card-position-tag {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-front {
+  background: var(--gradient-mystic);
+  border: 2px solid rgba(201, 168, 76, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front-symbol {
+  font-size: 3rem;
+  color: var(--primary);
+  opacity: 0.5;
+}
+
+.card-front::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 9px;
+  pointer-events: none;
+}
+
+.card-back {
+  background: #0a0a1a;
+  border: 2px solid var(--primary);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-image-reversed {
+  transform: rotate(180deg);
+}
+
+.card-info-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0.6rem 0.5rem;
+  background: linear-gradient(to top, rgba(10, 10, 26, 0.95) 60%, transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card-name-cn {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-glow);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+}
+
+.card-orientation {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+}
+
+.card-orientation.upright {
+  background: rgba(76, 175, 80, 0.25);
+  color: #81c784;
+  border: 1px solid rgba(76, 175, 80, 0.4);
+}
+
+.card-orientation.reversed {
+  background: rgba(244, 67, 54, 0.25);
+  color: #e57373;
+  border: 1px solid rgba(244, 67, 54, 0.4);
+}
+
+/* Card suit label */
+.card-suit-label {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  margin-bottom: 0.2rem;
+}
+
+/* ========== Card Nature Effects ========== */
+
+/* Positive card - golden sparkle border */
+.nature-positive .card-back {
+  border-color: #ffd700;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.05);
+}
+
+/* Sparkle canvas overlay */
+.card-effect-canvas {
+  position: absolute;
+  top: -10px; left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  pointer-events: none;
+  z-index: 10;
+  border-radius: 16px;
+}
+
+.sparkle-canvas {
+  animation: sparkleAppear 0.8s ease both;
+}
+
+@keyframes sparkleAppear {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Challenging card - warm purple glow */
+.nature-challenging .card-back {
+  border-color: #9c78c8;
+  box-shadow: 0 0 25px rgba(156, 120, 200, 0.25), inset 0 0 20px rgba(156, 120, 200, 0.05);
+}
+
+.card-effect-glow {
+  position: absolute;
+  top: -15px; left: -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.warm-glow {
+  background: radial-gradient(ellipse at center, rgba(156, 120, 200, 0.15), transparent 70%);
+  animation: warmPulse 3s ease-in-out infinite;
+}
+
+@keyframes warmPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%      { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* Neutral card */
+.nature-neutral .card-back {
+  border-color: var(--primary);
+}
+
+/* ========== Nature Badge in Interpretation ========== */
+.interp-nature-badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.nature-badge-positive {
+  background: rgba(76, 175, 80, 0.15);
+  color: #81c784;
+}
+
+.nature-badge-neutral {
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--primary);
+}
+
+.nature-badge-challenging {
+  background: rgba(156, 120, 200, 0.15);
+  color: #b39ddb;
+}
+
+/* Interpretation card nature borders */
+.interp-positive {
+  border-left: 3px solid rgba(76, 175, 80, 0.4);
+}
+
+.interp-challenging {
+  border-left: 3px solid rgba(156, 120, 200, 0.4);
+}
+
+/* ========== Encourage Banner ========== */
+.encourage-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, rgba(156, 120, 200, 0.08), rgba(100, 180, 255, 0.08));
+  border: 1px solid rgba(156, 120, 200, 0.2);
+  border-radius: 12px;
+  animation: encourageGlow 3s ease-in-out infinite;
+}
+
+@keyframes encourageGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(156, 120, 200, 0.05); }
+  50%      { box-shadow: 0 0 20px rgba(156, 120, 200, 0.15); }
+}
+
+.encourage-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.encourage-text {
+  font-size: 0.85rem;
+  color: #b39ddb;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ========== Summary Nature Styles ========== */
+.summary-positive {
+  border-color: rgba(76, 175, 80, 0.3);
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.05), rgba(201, 168, 76, 0.05));
+}
+
+.summary-challenging {
+  border-color: rgba(156, 120, 200, 0.3);
+  background: linear-gradient(135deg, rgba(156, 120, 200, 0.05), rgba(100, 180, 255, 0.05));
+}
+
+.summary-encourage {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(156, 120, 200, 0.08);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #b39ddb;
+  line-height: 1.8;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ========== Interpretation ========== */
+.result-interpretation {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.interpretation-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.interp-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  flex-wrap: wrap;
+}
+
+.interp-position {
+  font-size: 0.8rem;
+  color: var(--accent-purple);
+  background: rgba(123, 94, 167, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.interp-card-name {
+  font-size: 1.2rem;
+  color: var(--primary-glow);
+  font-weight: 700;
+}
+
+.interp-orientation {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-left: auto;
+}
+
+.interp-body {
+  line-height: 1.8;
+}
+
+.interp-section {
+  margin-bottom: 1rem;
+}
+
+.interp-section:last-child { margin-bottom: 0; }
+
+.interp-section-title {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.interp-section-content {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ========== Summary ========== */
+.result-summary {
+  width: 100%;
+  max-width: 800px;
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.05), rgba(123, 94, 167, 0.05));
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.6s forwards;
+}
+
+.summary-title {
+  font-size: 1.2rem;
+  color: var(--primary-glow);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.summary-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 2;
+  font-style: italic;
+  text-align: left;
+}
+
+.summary-keywords {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.restart-btn {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* ========== Loading ========== */
+.loading-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(10, 10, 26, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-overlay.active { opacity: 1; }
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-content p {
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.tarot-spinner {
+  width: 60px; height: 60px;
+  border: 3px solid rgba(201, 168, 76, 0.2);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ========== Particles ========== */
+.particle {
+  position: fixed;
+  width: 4px; height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  animation: particleFade 1s ease-out forwards;
+}
+
+@keyframes particleFade {
+  0%   { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0) translateY(-50px); }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .title-en { font-size: 2.2rem; }
+  .title-cn { font-size: 1.2rem; }
+
+  .spread-selection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spread-btn { width: 280px; }
+
+  .carousel-stage { width: 380px; height: 220px; }
+  .carousel-card { width: 85px; height: 140px; }
+  .carousel-card-symbol { font-size: 1.4rem; }
+  .carousel-arrow { width: 38px; height: 38px; font-size: 1.8rem; }
+  .picked-slot { width: 65px; height: 100px; }
+  .picked-slot-symbol { font-size: 1.4rem; }
+
+  .tarot-card { width: 150px; }
+  .card-inner { height: 260px; }
+  .card-name-cn { font-size: 0.9rem; }
+  .result-cards { gap: 1rem; }
+  .page-content { padding: 1rem; }
+  .interpretation-card { padding: 1.5rem; }
+  .result-question { padding: 0.8rem 1.2rem; }
+  .result-question-text { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+  .title-en { font-size: 1.8rem; }
+
+  .spread-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 1.5rem 1rem;
+  }
+
+  .carousel-stage { width: 280px; height: 200px; }
+  .carousel-card { width: 75px; height: 120px; }
+  .carousel-arrow { width: 34px; height: 34px; font-size: 1.6rem; }
+  .picked-slot { width: 55px; height: 85px; }
+  .picked-slot-symbol { font-size: 1.2rem; }
+  .picked-cards-area { gap: 0.8rem; }
+
+  .tarot-card { width: 120px; }
+  .card-inner { height: 210px; }
+  .card-name-cn { font-size: 0.8rem; }
+}
