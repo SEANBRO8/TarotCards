@@ -1,16 +1,79 @@
-# React + Vite
+# 🔮 塔罗占卜 Tarot Divination
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一款精美的在线塔罗牌占卜应用，基于经典韦特（Rider-Waite）塔罗牌，提供沉浸式的占卜体验。
 
-Currently, two official plugins are available:
+## ✨ 功能特色
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **完整 78 张塔罗牌** — 22 张大阿卡纳 + 56 张小阿卡纳（权杖、圣杯、宝剑、星币）
+- **三种牌阵** — 单牌占卜、爱情占卜（双牌）、三牌阵（过去/现在/未来）
+- **3D 卡牌轮播** — 支持拖拽滑动、惯性效果、循环浏览
+- **正位 / 逆位** — 每张牌随机正逆位，提供不同解读
+- **经典牌面图片** — 使用公共领域韦特塔罗牌原版插画
+- **动态视觉效果** — 好牌闪光特效，挑战牌温暖鼓励
+- **星空主题** — 神秘深邃的星空背景，沉浸式体验
+- **响应式设计** — 完美适配桌面端与移动端
 
-## React Compiler
+## 🚀 快速开始
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 安装依赖
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 启动开发服务器
+
+```bash
+npm run dev
+```
+
+浏览器访问 `http://localhost:5173` 即可使用。
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+构建产物输出到 `dist/` 目录。
+
+## 🛠 技术栈
+
+- **React 19** — UI 框架
+- **Vite 7** — 构建工具，极速 HMR
+- **CSS3** — 3D 变换、动画、渐变
+- **Canvas API** — 粒子闪光特效
+
+## 📁 项目结构
+
+```
+src/
+├── main.jsx              # 应用入口
+├── App.jsx               # 主组件，页面状态管理
+├── App.css               # 全局样式与组件样式
+├── index.css             # 基础样式与 CSS 变量
+├── components/
+│   ├── Landing.jsx       # 首页 — 选择牌阵
+│   ├── Question.jsx      # 问题页 — 输入占卜问题
+│   ├── DrawCards.jsx     # 抽牌页 — 3D 卡牌轮播
+│   ├── Result.jsx        # 结果页 — 牌面解读与总结
+│   └── Stars.jsx         # 星空背景动画
+└── data/
+    ├── tarotCards.js      # 78 张塔罗牌数据（含释义）
+    └── cardImages.js      # 牌面图片 URL 映射
+```
+
+## 🃏 占卜流程
+
+1. **选择牌阵** — 单牌 / 爱情 / 三牌阵
+2. **输入问题**（可选）— 写下你想问的问题
+3. **抽取卡牌** — 滑动轮播，点击选牌
+4. **查看结果** — 翻牌揭晓，获取详细解读
+
+## 📜 许可证
+
+本项目代码为开源项目。塔罗牌图片来自 [Wikimedia Commons](https://commons.wikimedia.org/)，属于公共领域（Public Domain）。
+
+---
+
+*愿星辰指引你的方向* ✨
