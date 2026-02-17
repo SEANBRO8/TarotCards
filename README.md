@@ -1,79 +1,79 @@
-# 🔮 塔罗占卜 Tarot Divination
+# Tarot Divination
 
-一款精美的在线塔罗牌占卜应用，基于经典韦特（Rider-Waite）塔罗牌，提供沉浸式的占卜体验。
+A beautifully crafted online Tarot card divination app built with React, featuring the classic Rider-Waite Tarot deck for an immersive reading experience.
 
-## ✨ 功能特色
+## Features
 
-- **完整 78 张塔罗牌** — 22 张大阿卡纳 + 56 张小阿卡纳（权杖、圣杯、宝剑、星币）
-- **三种牌阵** — 单牌占卜、爱情占卜（双牌）、三牌阵（过去/现在/未来）
-- **3D 卡牌轮播** — 支持拖拽滑动、惯性效果、循环浏览
-- **正位 / 逆位** — 每张牌随机正逆位，提供不同解读
-- **经典牌面图片** — 使用公共领域韦特塔罗牌原版插画
-- **动态视觉效果** — 好牌闪光特效，挑战牌温暖鼓励
-- **星空主题** — 神秘深邃的星空背景，沉浸式体验
-- **响应式设计** — 完美适配桌面端与移动端
+- **Full 78-Card Deck** — 22 Major Arcana + 56 Minor Arcana (Wands, Cups, Swords, Pentacles)
+- **Three Spread Types** — Single card, Love spread (two cards), Three-card spread (Past / Present / Future)
+- **3D Card Carousel** — Drag-to-scroll with inertia, snapping, and infinite loop
+- **Upright & Reversed** — Each card is randomly drawn upright or reversed with distinct interpretations
+- **Classic Card Art** — Public domain Rider-Waite Tarot illustrations from Wikimedia Commons
+- **Dynamic Visual Effects** — Sparkle effects for positive cards, warm encouragement for challenging ones
+- **Starry Night Theme** — Mystical animated starfield background
+- **Responsive Design** — Fully optimized for both desktop and mobile
 
-## 🚀 快速开始
+## Getting Started
 
-### 安装依赖
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-### 启动开发服务器
+### Start the dev server
 
 ```bash
 npm run dev
 ```
 
-浏览器访问 `http://localhost:5173` 即可使用。
+Open `http://localhost:5173` in your browser.
 
-### 构建生产版本
+### Build for production
 
 ```bash
 npm run build
 ```
 
-构建产物输出到 `dist/` 目录。
+Output goes to the `dist/` directory.
 
-## 🛠 技术栈
+## Tech Stack
 
-- **React 19** — UI 框架
-- **Vite 7** — 构建工具，极速 HMR
-- **CSS3** — 3D 变换、动画、渐变
-- **Canvas API** — 粒子闪光特效
+- **React 19** — UI framework
+- **Vite 7** — Build tool with lightning-fast HMR
+- **CSS3** — 3D transforms, animations, gradients
+- **Canvas API** — Particle sparkle effects
 
-## 📁 项目结构
+## Project Structure
 
 ```
 src/
-├── main.jsx              # 应用入口
-├── App.jsx               # 主组件，页面状态管理
-├── App.css               # 全局样式与组件样式
-├── index.css             # 基础样式与 CSS 变量
+├── main.jsx              # App entry point
+├── App.jsx               # Root component & page state management
+├── App.css               # Global & component styles
+├── index.css             # Base styles & CSS variables
 ├── components/
-│   ├── Landing.jsx       # 首页 — 选择牌阵
-│   ├── Question.jsx      # 问题页 — 输入占卜问题
-│   ├── DrawCards.jsx     # 抽牌页 — 3D 卡牌轮播
-│   ├── Result.jsx        # 结果页 — 牌面解读与总结
-│   └── Stars.jsx         # 星空背景动画
+│   ├── Landing.jsx       # Home — choose a spread type
+│   ├── Question.jsx      # Question — enter your question
+│   ├── DrawCards.jsx     # Draw — 3D card carousel
+│   ├── Result.jsx        # Result — card reveals & interpretations
+│   └── Stars.jsx         # Animated starfield background
 └── data/
-    ├── tarotCards.js      # 78 张塔罗牌数据（含释义）
-    └── cardImages.js      # 牌面图片 URL 映射
+    ├── tarotCards.js      # Full 78-card dataset with meanings
+    └── cardImages.js      # Card image URL mappings
 ```
 
-## 🃏 占卜流程
+## How It Works
 
-1. **选择牌阵** — 单牌 / 爱情 / 三牌阵
-2. **输入问题**（可选）— 写下你想问的问题
-3. **抽取卡牌** — 滑动轮播，点击选牌
-4. **查看结果** — 翻牌揭晓，获取详细解读
+1. **Choose a spread** — Single / Love / Three-card
+2. **Ask your question** (optional) — Type in what you'd like guidance on
+3. **Draw your cards** — Swipe through the carousel and tap to select
+4. **View your reading** — Cards flip to reveal artwork and detailed interpretations
 
-## 📜 许可证
+## License
 
-本项目代码为开源项目。塔罗牌图片来自 [Wikimedia Commons](https://commons.wikimedia.org/)，属于公共领域（Public Domain）。
+This project is open source. Tarot card images are sourced from [Wikimedia Commons](https://commons.wikimedia.org/) and are in the public domain.
 
 ---
 
-*愿星辰指引你的方向* ✨
+*May the stars guide your path* ✨
